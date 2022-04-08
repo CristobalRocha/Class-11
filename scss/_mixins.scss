@@ -1,4 +1,4 @@
-@mixin flexBox($direction: row, $justifyContent: center, $alignItems: center, $wrap: no-wrap, $rowGap: 0, $columnGap: 0) {
+@mixin flexBox($direction: row, $justifyContent: center, $alignItems: center, $wrap: nowrap, $rowGap: 0, $columnGap: 0) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justifyContent;
@@ -6,4 +6,18 @@
     flex-flow: $direction $wrap;
     row-gap: $rowGap;
     column-gap: $columnGap;
+}
+
+@mixin borderBox($borderWidth: 1px, $borderStyle: solid, $borderColor: gray, $borderRadius: 0) {
+    border-width: $borderWidth;
+    border-style: $borderStyle;
+    border-color: $borderColor;
+    border-radius: $borderRadius;
+}
+
+@mixin bgPic($background, $bgPosition: center, $bgSize: contain, $bgRepeat: no-repeat) {
+    background: url($background);
+    background-position: $bgPosition;
+    background-size: $bgSize;
+    background-repeat: $bgRepeat;
 }
